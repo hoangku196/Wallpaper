@@ -17,25 +17,40 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String FLICKZ_LINK = "";
-    private List<Photo> photoList;
+    private String FLICKZ_LINK = "https://www.flickr.com/services/rest/";
+    private List<Photo> photoList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AndroidNetworking.initialize(getApplicationContext());
+        new BackgroundLoadUrlFlickzTask().execute(FLICKZ_LINK);
     }
 
     public class BackgroundLoadUrlFlickzTask extends AsyncTask<String, String, String> {
 
         @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            Log.e("pre", "pre");
+        }
+
+        @Override
         protected String doInBackground(String... strings) {
+            fastAndroidNetworkingJsonArrayRequest(strings[0]);
             return null;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            Log.e("post", "post");
         }
     }
 
@@ -43,13 +58,20 @@ public class MainActivity extends AppCompatActivity {
         LinkParameter mLinkParameter = new LinkParameter();
         mLinkParameter.setApi_key("0375ce0a9316a6865766bc1068fcc213");
         mLinkParameter.setFormat("json");
-        mLinkParameter.setExtras("description%2C+license%2C+date_upload%2C+date_taken%2C+owner_name%2C+icon_server%2C+original_format%2C+last_update%2C+geo%2C+tags%2C+machine_tags%2C+o_dims%2C+views%2C+media%2C+path_alias%2C+url_sq%2C+url_t%2C+url_s%2C+url_q%2C+url_m%2C+url_n%2C+url_z%2C+url_c%2C+url_l%2C+url_o");
+        mLinkParameter.setExtras("description,license,url_t");
         mLinkParameter.setMethod("flickr.photos.search");
         mLinkParameter.setNoJsonCallBack(1);
         mLinkParameter.setTags("cats");
+        
         AndroidNetworking.post(link)
                 .setPriority(Priority.HIGH)
                 .addBodyParameter(mLinkParameter)
+//                .addBodyParameter("api_key", "0375ce0a9316a6865766bc1068fcc213")
+//                .addBodyParameter("format", "json")
+//                .addBodyParameter("extras", "description,license,url_t")
+//                .addBodyParameter("method", "flickr.photos.search")
+//                .addBodyParameter("nojsoncallback", "1")
+//                .addBodyParameter("tags", "cats")
                 .setTag("test")
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
@@ -59,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                         try {
                             JSONObject jsonPhotoObject = jsonRootObject.getJSONObject("photos");
                             JSONArray jsonPhotosArray = jsonPhotoObject.getJSONArray("photo");
+                            Log.e("resposne", response.toString());
                             readJson(jsonPhotosArray);
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -76,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject photoObject = jsonArray.getJSONObject(i);
             Photo photo = new Photo(photoObject.getInt("id"), photoObject.getString("owner"), photoObject.getString("title"), photoObject.getString("url_t"));
+            Log.e("photo", photo.getTitle());
             photoList.add(photo);
         }
         Log.e("size", photoList.size() + "");
