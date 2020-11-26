@@ -642,4 +642,50 @@ public class Photo {
         this.additionalProperties.put(name, value);
     }
 
+    @Override
+    public String toString() {
+        return "Photo{" +
+                "id='" + id + '\'' +
+                ", owner='" + owner + '\'' +
+                ", secret='" + secret + '\'' +
+                ", server='" + server + '\'' +
+                ", farm=" + farm +
+                ", title='" + title + '\'' +
+                ", ispublic=" + ispublic +
+                ", isfriend=" + isfriend +
+                ", isfamily=" + isfamily +
+                ", dateFaved='" + dateFaved + '\'' +
+                ", urlSq='" + urlSq + '\'' +
+                ", heightSq=" + heightSq +
+                ", widthSq=" + widthSq +
+                ", urlT='" + urlT + '\'' +
+                ", heightT=" + heightT +
+                ", widthT=" + widthT +
+                ", urlS='" + urlS + '\'' +
+                ", heightS='" + heightS + '\'' +
+                ", widthS='" + widthS + '\'' +
+                ", urlQ='" + urlQ + '\'' +
+                ", heightQ='" + heightQ + '\'' +
+                ", widthQ='" + widthQ + '\'' +
+                ", urlM='" + urlM + '\'' +
+                ", heightM='" + heightM + '\'' +
+                ", widthM='" + widthM + '\'' +
+                ", urlN='" + urlN + '\'' +
+                ", heightN='" + heightN + '\'' +
+                ", widthN='" + widthN + '\'' +
+                ", urlZ='" + urlZ + '\'' +
+                ", heightZ='" + heightZ + '\'' +
+                ", widthZ='" + widthZ + '\'' +
+                ", urlC='" + urlC + '\'' +
+                ", heightC='" + heightC + '\'' +
+                ", widthC='" + widthC + '\'' +
+                ", urlL='" + urlL + '\'' +
+                ", heightL='" + heightL + '\'' +
+                ", widthL='" + widthL + '\'' +
+                ", urlO='" + urlO + '\'' +
+                ", heightO='" + heightO + '\'' +
+                ", widthO='" + widthO + '\'' +
+                ", additionalProperties=" + additionalProperties +
+                '}';
+    }
 }

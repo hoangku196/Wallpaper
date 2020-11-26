@@ -1,6 +1,7 @@
 
 package com.example.wallpaper.Model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +31,7 @@ public class Photos {
     @JsonProperty("total")
     private Integer total;
     @JsonProperty("photo")
-    private List<Photo> photo = null;
+    private List<Photo> photo = new ArrayList<>();
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 

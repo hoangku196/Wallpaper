@@ -1,6 +1,7 @@
 package com.example.wallpaper;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +21,7 @@ class CustomRecyclerView extends RecyclerView.Adapter<CustomRecyclerView.ViewHol
     private Context context;
     private List<Photo> photos;
 
-    public CustomRecyclerView(Context context, List<Photo> photos){
+    public CustomRecyclerView(Context context, List<Photo> photos) {
         this.context = context;
         this.photos = photos;
     }
@@ -36,7 +37,8 @@ class CustomRecyclerView extends RecyclerView.Adapter<CustomRecyclerView.ViewHol
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Photo photo = photos.get(position);
-        Picasso.get().load(photo.getUrlS()).into(holder.imgPhoto);
+        Picasso.get().load(photo.getUrlT()).into(holder.imgPhoto);
+        Log.e("url t", photo.toString() + " ");
         holder.tvOwner.setText(photo.getOwner());
         holder.tvTitle.setText(photo.getTitle());
     }
