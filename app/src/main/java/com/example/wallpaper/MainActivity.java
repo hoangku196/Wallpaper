@@ -30,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AndroidNetworking.initialize(getApplicationContext());
-        new BackgroundLoadUrlFlickzTask().execute(FLICKZ_LINK);
+        new BackgroundLoadUrlFlickeTask().execute(FLICKZ_LINK);
     }
 
-    public class BackgroundLoadUrlFlickzTask extends AsyncTask<String, String, String> {
+    public class BackgroundLoadUrlFlickrTask extends AsyncTask<String, String, String> {
 
         @Override
         protected void onPreExecute() {
@@ -104,4 +104,6 @@ public class MainActivity extends AppCompatActivity {
         }
         Log.e("size", photoList.size() + "");
     }
+
+    
 }
