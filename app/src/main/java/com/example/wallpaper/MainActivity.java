@@ -3,6 +3,7 @@ package com.example.wallpaper;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void init() {
         {
             rv = findViewById(R.id.rv);
-            LinearLayoutManager lm = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+            RecyclerView.LayoutManager lm = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
             adapter = new CustomRecyclerView(this, photoList);
             rv.setLayoutManager(lm);
             rv.setAdapter(adapter);
@@ -108,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .addBodyParameter("api_key", "0375ce0a9316a6865766bc1068fcc213")
                 .addBodyParameter("user_id", "191172940@N06")
                 .addBodyParameter("format", "json")
-                .addBodyParameter("extras", "url_sq, url_t, url_s, url_q, url_m, url_n, url_z, url_c, url_l, url_o")
+                .addBodyParameter("extras", "description, license, date_upload, date_taken, owner_name, icon_server, original_format, last_update, geo, tags, machine_tags, o_dims, views, media, path_alias, url_sq, url_t, url_s, url_q, url_m, url_n, url_z, url_c, url_l, url_o")
                 .addBodyParameter("method", "flickr.favorites.getList")
                 .addBodyParameter("nojsoncallback", "1")
                 .setTag("test")
@@ -147,9 +148,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //    }
 
     private void handlingJson(String s) {
-        Type listType = new TypeToken<LinkStat>() {
+        Type rootType = new TypeToken<LinkStat>() {
         }.getType();
-        LinkStat linkStat = new Gson().fromJson(s, listType);
+        LinkStat linkStat = new Gson().fromJson(s, rootType);
         Log.e("status", linkStat.getPhotos().getPhoto().size() + " ");
 
         for (Photo photo : linkStat.getPhotos().getPhoto()) {
@@ -160,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 //    private void demoGson(){
-//        Type listType = new TypeToken<List<MyJson>>(){}.getType();
-//        List<MyJson> myJsons = new Gson().fromJson(s, listType);
+//        Type rootType = new TypeToken<List<MyJson>>(){}.getType();
+//        List<MyJson> myJsons = new Gson().fromJson(s, rootType);
 //    }
 }

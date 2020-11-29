@@ -3,6 +3,7 @@ package com.example.wallpaper.Model;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -12,46 +13,46 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "id",
-    "owner",
-    "secret",
-    "server",
-    "farm",
-    "title",
-    "ispublic",
-    "isfriend",
-    "isfamily",
-    "date_faved",
-    "url_sq",
-    "height_sq",
-    "width_sq",
-    "url_t",
-    "height_t",
-    "width_t",
-    "url_s",
-    "height_s",
-    "width_s",
-    "url_q",
-    "height_q",
-    "width_q",
-    "url_m",
-    "height_m",
-    "width_m",
-    "url_n",
-    "height_n",
-    "width_n",
-    "url_z",
-    "height_z",
-    "width_z",
-    "url_c",
-    "height_c",
-    "width_c",
-    "url_l",
-    "height_l",
-    "width_l",
-    "url_o",
-    "height_o",
-    "width_o"
+        "id",
+        "owner",
+        "secret",
+        "server",
+        "farm",
+        "title",
+        "ispublic",
+        "isfriend",
+        "isfamily",
+        "date_faved",
+        "url_sq",
+        "height_sq",
+        "width_sq",
+        "url_t",
+        "height_t",
+        "width_t",
+        "url_s",
+        "height_s",
+        "width_s",
+        "url_q",
+        "height_q",
+        "width_q",
+        "url_m",
+        "height_m",
+        "width_m",
+        "url_n",
+        "height_n",
+        "width_n",
+        "url_z",
+        "height_z",
+        "width_z",
+        "url_c",
+        "height_c",
+        "width_c",
+        "url_l",
+        "height_l",
+        "width_l",
+        "url_o",
+        "height_o",
+        "width_o"
 })
 public class Photo {
 
@@ -76,119 +77,117 @@ public class Photo {
     @JsonProperty("date_faved")
     private String dateFaved;
     @JsonProperty("url_sq")
-    private String urlSq;
+    private String url_sq;
     @JsonProperty("height_sq")
-    private Integer heightSq;
+    private Integer height_sq;
     @JsonProperty("width_sq")
-    private Integer widthSq;
+    private Integer width_sq;
     @JsonProperty("url_t")
-    private String urlT;
+    private String url_t;
     @JsonProperty("height_t")
-    private Integer heightT;
+    private Integer height_t;
     @JsonProperty("width_t")
-    private Integer widthT;
+    private Integer width_t;
     @JsonProperty("url_s")
-    private String urlS;
+    private String url_s;
     @JsonProperty("height_s")
-    private String heightS;
+    private String height_s;
     @JsonProperty("width_s")
-    private String widthS;
+    private String width_s;
     @JsonProperty("url_q")
-    private String urlQ;
+    private String url_q;
     @JsonProperty("height_q")
-    private String heightQ;
+    private String height_q;
     @JsonProperty("width_q")
-    private String widthQ;
+    private String width_q;
     @JsonProperty("url_m")
-    private String urlM;
+    private String url_m;
     @JsonProperty("height_m")
-    private String heightM;
+    private String height_m;
     @JsonProperty("width_m")
-    private String widthM;
+    private String width_m;
     @JsonProperty("url_n")
-    private String urlN;
+    private String url_n;
     @JsonProperty("height_n")
-    private String heightN;
+    private String height_n;
     @JsonProperty("width_n")
-    private String widthN;
+    private String width_n;
     @JsonProperty("url_z")
-    private String urlZ;
+    private String url_z;
     @JsonProperty("height_z")
-    private String heightZ;
+    private String height_z;
     @JsonProperty("width_z")
-    private String widthZ;
+    private String width_z;
     @JsonProperty("url_c")
-    private String urlC;
+    private String url_c;
     @JsonProperty("height_c")
-    private String heightC;
+    private String height_c;
     @JsonProperty("width_c")
-    private String widthC;
+    private String width_c;
     @JsonProperty("url_l")
-    private String urlL;
+    private String url_l;
     @JsonProperty("height_l")
-    private String heightL;
+    private String height_l;
     @JsonProperty("width_l")
-    private String widthL;
+    private String width_l;
     @JsonProperty("url_o")
-    private String urlO;
+    private String url_o;
     @JsonProperty("height_o")
-    private String heightO;
+    private String height_o;
     @JsonProperty("width_o")
-    private String widthO;
+    private String width_o;
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
      * No args constructor for use in serialization
-     * 
      */
     public Photo() {
     }
 
     /**
-     * 
-     * @param widthM
+     * @param width_m
      * @param server
-     * @param widthL
-     * @param urlC
+     * @param width_l
+     * @param url_c
      * @param isfriend
-     * @param urlM
-     * @param widthT
-     * @param urlN
-     * @param widthS
-     * @param heightZ
+     * @param url_m
+     * @param width_t
+     * @param url_n
+     * @param width_s
+     * @param height_z
      * @param secret
-     * @param urlSq
-     * @param urlL
+     * @param url_sq
+     * @param url_l
      * @param title
-     * @param widthQ
-     * @param widthO
-     * @param widthN
-     * @param heightO
-     * @param heightQ
-     * @param widthZ
-     * @param heightT
-     * @param heightS
+     * @param width_q
+     * @param width_o
+     * @param width_n
+     * @param height_o
+     * @param height_q
+     * @param width_z
+     * @param height_t
+     * @param height_s
      * @param ispublic
      * @param farm
      * @param id
-     * @param heightL
-     * @param heightN
-     * @param heightM
+     * @param height_l
+     * @param height_n
+     * @param height_m
      * @param owner
-     * @param heightC
+     * @param height_c
      * @param dateFaved
-     * @param widthSq
+     * @param width_sq
      * @param isfamily
-     * @param urlS
-     * @param urlT
-     * @param urlQ
-     * @param urlO
-     * @param widthC
-     * @param heightSq
-     * @param urlZ
+     * @param url_s
+     * @param url_t
+     * @param url_q
+     * @param url_o
+     * @param width_c
+     * @param height_sq
+     * @param url_z
      */
-    public Photo(String id, String owner, String secret, String server, Integer farm, String title, Integer ispublic, Integer isfriend, Integer isfamily, String dateFaved, String urlSq, Integer heightSq, Integer widthSq, String urlT, Integer heightT, Integer widthT, String urlS, String heightS, String widthS, String urlQ, String heightQ, String widthQ, String urlM, String heightM, String widthM, String urlN, String heightN, String widthN, String urlZ, String heightZ, String widthZ, String urlC, String heightC, String widthC, String urlL, String heightL, String widthL, String urlO, String heightO, String widthO) {
+    public Photo(String id, String owner, String secret, String server, Integer farm, String title, Integer ispublic, Integer isfriend, Integer isfamily, String dateFaved, String url_sq, Integer height_sq, Integer width_sq, String url_t, Integer height_t, Integer width_t, String url_s, String height_s, String width_s, String url_q, String height_q, String width_q, String url_m, String height_m, String width_m, String url_n, String height_n, String width_n, String url_z, String height_z, String width_z, String url_c, String height_c, String width_c, String url_l, String height_l, String width_l, String url_o, String height_o, String width_o) {
         super();
         this.id = id;
         this.owner = owner;
@@ -200,36 +199,36 @@ public class Photo {
         this.isfriend = isfriend;
         this.isfamily = isfamily;
         this.dateFaved = dateFaved;
-        this.urlSq = urlSq;
-        this.heightSq = heightSq;
-        this.widthSq = widthSq;
-        this.urlT = urlT;
-        this.heightT = heightT;
-        this.widthT = widthT;
-        this.urlS = urlS;
-        this.heightS = heightS;
-        this.widthS = widthS;
-        this.urlQ = urlQ;
-        this.heightQ = heightQ;
-        this.widthQ = widthQ;
-        this.urlM = urlM;
-        this.heightM = heightM;
-        this.widthM = widthM;
-        this.urlN = urlN;
-        this.heightN = heightN;
-        this.widthN = widthN;
-        this.urlZ = urlZ;
-        this.heightZ = heightZ;
-        this.widthZ = widthZ;
-        this.urlC = urlC;
-        this.heightC = heightC;
-        this.widthC = widthC;
-        this.urlL = urlL;
-        this.heightL = heightL;
-        this.widthL = widthL;
-        this.urlO = urlO;
-        this.heightO = heightO;
-        this.widthO = widthO;
+        this.url_sq = url_sq;
+        this.height_sq = height_sq;
+        this.width_sq = width_sq;
+        this.url_t = url_t;
+        this.height_t = height_t;
+        this.width_t = width_t;
+        this.url_s = url_s;
+        this.height_s = height_s;
+        this.width_s = width_s;
+        this.url_q = url_q;
+        this.height_q = height_q;
+        this.width_q = width_q;
+        this.url_m = url_m;
+        this.height_m = height_m;
+        this.width_m = width_m;
+        this.url_n = url_n;
+        this.height_n = height_n;
+        this.width_n = width_n;
+        this.url_z = url_z;
+        this.height_z = height_z;
+        this.width_z = width_z;
+        this.url_c = url_c;
+        this.height_c = height_c;
+        this.width_c = width_c;
+        this.url_l = url_l;
+        this.height_l = height_l;
+        this.width_l = width_l;
+        this.url_o = url_o;
+        this.height_o = height_o;
+        this.width_o = width_o;
     }
 
     @JsonProperty("id")
@@ -334,302 +333,302 @@ public class Photo {
 
     @JsonProperty("url_sq")
     public String getUrlSq() {
-        return urlSq;
+        return url_sq;
     }
 
     @JsonProperty("url_sq")
-    public void setUrlSq(String urlSq) {
-        this.urlSq = urlSq;
+    public void setUrlSq(String url_sq) {
+        this.url_sq = url_sq;
     }
 
     @JsonProperty("height_sq")
     public Integer getHeightSq() {
-        return heightSq;
+        return height_sq;
     }
 
     @JsonProperty("height_sq")
-    public void setHeightSq(Integer heightSq) {
-        this.heightSq = heightSq;
+    public void setHeightSq(Integer height_sq) {
+        this.height_sq = height_sq;
     }
 
     @JsonProperty("width_sq")
     public Integer getWidthSq() {
-        return widthSq;
+        return width_sq;
     }
 
     @JsonProperty("width_sq")
-    public void setWidthSq(Integer widthSq) {
-        this.widthSq = widthSq;
+    public void setWidthSq(Integer width_sq) {
+        this.width_sq = width_sq;
     }
 
     @JsonProperty("url_t")
     public String getUrlT() {
-        return urlT;
+        return url_t;
     }
 
     @JsonProperty("url_t")
-    public void setUrlT(String urlT) {
-        this.urlT = urlT;
+    public void setUrlT(String url_t) {
+        this.url_t = url_t;
     }
 
     @JsonProperty("height_t")
     public Integer getHeightT() {
-        return heightT;
+        return height_t;
     }
 
     @JsonProperty("height_t")
-    public void setHeightT(Integer heightT) {
-        this.heightT = heightT;
+    public void setHeightT(Integer height_t) {
+        this.height_t = height_t;
     }
 
     @JsonProperty("width_t")
     public Integer getWidthT() {
-        return widthT;
+        return width_t;
     }
 
     @JsonProperty("width_t")
-    public void setWidthT(Integer widthT) {
-        this.widthT = widthT;
+    public void setWidthT(Integer width_t) {
+        this.width_t = width_t;
     }
 
     @JsonProperty("url_s")
     public String getUrlS() {
-        return urlS;
+        return url_s;
     }
 
     @JsonProperty("url_s")
-    public void setUrlS(String urlS) {
-        this.urlS = urlS;
+    public void setUrlS(String url_s) {
+        this.url_s = url_s;
     }
 
     @JsonProperty("height_s")
     public String getHeightS() {
-        return heightS;
+        return height_s;
     }
 
     @JsonProperty("height_s")
-    public void setHeightS(String heightS) {
-        this.heightS = heightS;
+    public void setHeightS(String height_s) {
+        this.height_s = height_s;
     }
 
     @JsonProperty("width_s")
     public String getWidthS() {
-        return widthS;
+        return width_s;
     }
 
     @JsonProperty("width_s")
-    public void setWidthS(String widthS) {
-        this.widthS = widthS;
+    public void setWidthS(String width_s) {
+        this.width_s = width_s;
     }
 
     @JsonProperty("url_q")
     public String getUrlQ() {
-        return urlQ;
+        return url_q;
     }
 
     @JsonProperty("url_q")
-    public void setUrlQ(String urlQ) {
-        this.urlQ = urlQ;
+    public void setUrlQ(String url_q) {
+        this.url_q = url_q;
     }
 
     @JsonProperty("height_q")
     public String getHeightQ() {
-        return heightQ;
+        return height_q;
     }
 
     @JsonProperty("height_q")
-    public void setHeightQ(String heightQ) {
-        this.heightQ = heightQ;
+    public void setHeightQ(String height_q) {
+        this.height_q = height_q;
     }
 
     @JsonProperty("width_q")
     public String getWidthQ() {
-        return widthQ;
+        return width_q;
     }
 
     @JsonProperty("width_q")
-    public void setWidthQ(String widthQ) {
-        this.widthQ = widthQ;
+    public void setWidthQ(String width_q) {
+        this.width_q = width_q;
     }
 
     @JsonProperty("url_m")
     public String getUrlM() {
-        return urlM;
+        return url_m;
     }
 
     @JsonProperty("url_m")
-    public void setUrlM(String urlM) {
-        this.urlM = urlM;
+    public void setUrlM(String url_m) {
+        this.url_m = url_m;
     }
 
     @JsonProperty("height_m")
     public String getHeightM() {
-        return heightM;
+        return height_m;
     }
 
     @JsonProperty("height_m")
-    public void setHeightM(String heightM) {
-        this.heightM = heightM;
+    public void setHeightM(String height_m) {
+        this.height_m = height_m;
     }
 
     @JsonProperty("width_m")
     public String getWidthM() {
-        return widthM;
+        return width_m;
     }
 
     @JsonProperty("width_m")
-    public void setWidthM(String widthM) {
-        this.widthM = widthM;
+    public void setWidthM(String width_m) {
+        this.width_m = width_m;
     }
 
     @JsonProperty("url_n")
     public String getUrlN() {
-        return urlN;
+        return url_n;
     }
 
     @JsonProperty("url_n")
-    public void setUrlN(String urlN) {
-        this.urlN = urlN;
+    public void setUrlN(String url_n) {
+        this.url_n = url_n;
     }
 
     @JsonProperty("height_n")
     public String getHeightN() {
-        return heightN;
+        return height_n;
     }
 
     @JsonProperty("height_n")
-    public void setHeightN(String heightN) {
-        this.heightN = heightN;
+    public void setHeightN(String height_n) {
+        this.height_n = height_n;
     }
 
     @JsonProperty("width_n")
     public String getWidthN() {
-        return widthN;
+        return width_n;
     }
 
     @JsonProperty("width_n")
-    public void setWidthN(String widthN) {
-        this.widthN = widthN;
+    public void setWidthN(String width_n) {
+        this.width_n = width_n;
     }
 
     @JsonProperty("url_z")
     public String getUrlZ() {
-        return urlZ;
+        return url_z;
     }
 
     @JsonProperty("url_z")
-    public void setUrlZ(String urlZ) {
-        this.urlZ = urlZ;
+    public void setUrlZ(String url_z) {
+        this.url_z = url_z;
     }
 
     @JsonProperty("height_z")
     public String getHeightZ() {
-        return heightZ;
+        return height_z;
     }
 
     @JsonProperty("height_z")
-    public void setHeightZ(String heightZ) {
-        this.heightZ = heightZ;
+    public void setHeightZ(String height_z) {
+        this.height_z = height_z;
     }
 
     @JsonProperty("width_z")
     public String getWidthZ() {
-        return widthZ;
+        return width_z;
     }
 
     @JsonProperty("width_z")
-    public void setWidthZ(String widthZ) {
-        this.widthZ = widthZ;
+    public void setWidthZ(String width_z) {
+        this.width_z = width_z;
     }
 
     @JsonProperty("url_c")
     public String getUrlC() {
-        return urlC;
+        return url_c;
     }
 
     @JsonProperty("url_c")
-    public void setUrlC(String urlC) {
-        this.urlC = urlC;
+    public void setUrlC(String url_c) {
+        this.url_c = url_c;
     }
 
     @JsonProperty("height_c")
     public String getHeightC() {
-        return heightC;
+        return height_c;
     }
 
     @JsonProperty("height_c")
-    public void setHeightC(String heightC) {
-        this.heightC = heightC;
+    public void setHeightC(String height_c) {
+        this.height_c = height_c;
     }
 
     @JsonProperty("width_c")
     public String getWidthC() {
-        return widthC;
+        return width_c;
     }
 
     @JsonProperty("width_c")
-    public void setWidthC(String widthC) {
-        this.widthC = widthC;
+    public void setWidthC(String width_c) {
+        this.width_c = width_c;
     }
 
     @JsonProperty("url_l")
     public String getUrlL() {
-        return urlL;
+        return url_l;
     }
 
     @JsonProperty("url_l")
-    public void setUrlL(String urlL) {
-        this.urlL = urlL;
+    public void setUrlL(String url_l) {
+        this.url_l = url_l;
     }
 
     @JsonProperty("height_l")
     public String getHeightL() {
-        return heightL;
+        return height_l;
     }
 
     @JsonProperty("height_l")
-    public void setHeightL(String heightL) {
-        this.heightL = heightL;
+    public void setHeightL(String height_l) {
+        this.height_l = height_l;
     }
 
     @JsonProperty("width_l")
     public String getWidthL() {
-        return widthL;
+        return width_l;
     }
 
     @JsonProperty("width_l")
-    public void setWidthL(String widthL) {
-        this.widthL = widthL;
+    public void setWidthL(String width_l) {
+        this.width_l = width_l;
     }
 
     @JsonProperty("url_o")
     public String getUrlO() {
-        return urlO;
+        return url_o;
     }
 
     @JsonProperty("url_o")
-    public void setUrlO(String urlO) {
-        this.urlO = urlO;
+    public void setUrlO(String url_o) {
+        this.url_o = url_o;
     }
 
     @JsonProperty("height_o")
     public String getHeightO() {
-        return heightO;
+        return height_o;
     }
 
     @JsonProperty("height_o")
-    public void setHeightO(String heightO) {
-        this.heightO = heightO;
+    public void setHeightO(String height_o) {
+        this.height_o = height_o;
     }
 
     @JsonProperty("width_o")
     public String getWidthO() {
-        return widthO;
+        return width_o;
     }
 
     @JsonProperty("width_o")
-    public void setWidthO(String widthO) {
-        this.widthO = widthO;
+    public void setWidthO(String width_o) {
+        this.width_o = width_o;
     }
 
     @JsonAnyGetter
@@ -655,36 +654,36 @@ public class Photo {
                 ", isfriend=" + isfriend +
                 ", isfamily=" + isfamily +
                 ", dateFaved='" + dateFaved + '\'' +
-                ", urlSq='" + urlSq + '\'' +
-                ", heightSq=" + heightSq +
-                ", widthSq=" + widthSq +
-                ", urlT='" + urlT + '\'' +
-                ", heightT=" + heightT +
-                ", widthT=" + widthT +
-                ", urlS='" + urlS + '\'' +
-                ", heightS='" + heightS + '\'' +
-                ", widthS='" + widthS + '\'' +
-                ", urlQ='" + urlQ + '\'' +
-                ", heightQ='" + heightQ + '\'' +
-                ", widthQ='" + widthQ + '\'' +
-                ", urlM='" + urlM + '\'' +
-                ", heightM='" + heightM + '\'' +
-                ", widthM='" + widthM + '\'' +
-                ", urlN='" + urlN + '\'' +
-                ", heightN='" + heightN + '\'' +
-                ", widthN='" + widthN + '\'' +
-                ", urlZ='" + urlZ + '\'' +
-                ", heightZ='" + heightZ + '\'' +
-                ", widthZ='" + widthZ + '\'' +
-                ", urlC='" + urlC + '\'' +
-                ", heightC='" + heightC + '\'' +
-                ", widthC='" + widthC + '\'' +
-                ", urlL='" + urlL + '\'' +
-                ", heightL='" + heightL + '\'' +
-                ", widthL='" + widthL + '\'' +
-                ", urlO='" + urlO + '\'' +
-                ", heightO='" + heightO + '\'' +
-                ", widthO='" + widthO + '\'' +
+                ", url_sq='" + url_sq + '\'' +
+                ", height_sq=" + height_sq +
+                ", width_sq=" + width_sq +
+                ", url_t='" + url_t + '\'' +
+                ", height_t=" + height_t +
+                ", width_t=" + width_t +
+                ", url_s='" + url_s + '\'' +
+                ", height_s='" + height_s + '\'' +
+                ", width_s='" + width_s + '\'' +
+                ", url_q='" + url_q + '\'' +
+                ", height_q='" + height_q + '\'' +
+                ", width_q='" + width_q + '\'' +
+                ", url_m='" + url_m + '\'' +
+                ", height_m='" + height_m + '\'' +
+                ", width_m='" + width_m + '\'' +
+                ", url_n='" + url_n + '\'' +
+                ", height_n='" + height_n + '\'' +
+                ", width_n='" + width_n + '\'' +
+                ", url_z='" + url_z + '\'' +
+                ", height_z='" + height_z + '\'' +
+                ", width_z='" + width_z + '\'' +
+                ", url_c='" + url_c + '\'' +
+                ", height_c='" + height_c + '\'' +
+                ", width_c='" + width_c + '\'' +
+                ", url_l='" + url_l + '\'' +
+                ", height_l='" + height_l + '\'' +
+                ", width_l='" + width_l + '\'' +
+                ", url_o='" + url_o + '\'' +
+                ", height_o='" + height_o + '\'' +
+                ", width_o='" + width_o + '\'' +
                 ", additionalProperties=" + additionalProperties +
                 '}';
     }

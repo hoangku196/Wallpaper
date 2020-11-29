@@ -37,10 +37,7 @@ class CustomRecyclerView extends RecyclerView.Adapter<CustomRecyclerView.ViewHol
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Photo photo = photos.get(position);
-        Picasso.get().load(photo.getUrlT()).into(holder.imgPhoto);
-        Log.e("url t", photo.toString() + " ");
-        holder.tvOwner.setText(photo.getOwner());
-        holder.tvTitle.setText(photo.getTitle());
+        Picasso.get().load(photo.getUrlM()).into(holder.imgPhoto);
     }
 
     @Override
@@ -51,15 +48,11 @@ class CustomRecyclerView extends RecyclerView.Adapter<CustomRecyclerView.ViewHol
     class ViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView imgPhoto;
-        private TextView tvOwner;
-        private TextView tvTitle;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             imgPhoto = itemView.findViewById(R.id.imgPhoto);
-            tvOwner = itemView.findViewById(R.id.tvOwner);
-            tvTitle = itemView.findViewById(R.id.tvTitle);
         }
     }
 }
